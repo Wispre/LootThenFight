@@ -1,9 +1,9 @@
-public class ZaWarudo extends Weapons{
+public class WeebKatana extends Weapons{
 
-    private final int ONE_ZAWARUDO_DMG = 100;
+    private final int ONE_ZAWARUDO_DMG = 61;
 
-    public ZaWarudo(){
-        this.Name = "Za Warudo";
+    public WeebKatana(){
+        this.Name = "Weeb Katana";
         this.Damage = ONE_ZAWARUDO_DMG;
         this.DPR = getDamage();
         this.usesAmmo = false;

@@ -5,12 +5,12 @@ public class Pistol extends Weapons implements usable{
     private boolean reload = false;
 
 
-    private final int RUSTY_BULLET_DMG = 6;
-    private final int STANDARD_BULLET_DMG = 8;
-    private final int GOLDEN_BULLET_DMG = 10;
-    private final int AMMO = 18;
+    private final int RUSTY_BULLET_DMG = 4;
+    private final int STANDARD_BULLET_DMG = 5;
+    private final int GOLDEN_BULLET_DMG = 6;
+    private final int AMMO = 15;
 
-    private final int CLIP_AMOUNT = 6;
+    private final int CLIP_AMOUNT = 5;
     ///////////////////////////////////
     // RUSTY_RARITY_LEVEL = 1;       //
     // STANDARD_RARITY_LEVEL = 2;    //
