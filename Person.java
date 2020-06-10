@@ -153,7 +153,7 @@ public class Person{
         int backpackSize = weapon.size();
         int weaponToUse = 0;
         boolean didDodge = dodge();
-        File ora = new File("ORAORA.WAV");
+        File ora = new File("ORA.WAV");
         File muda = new File("muda.WAV");
         File za = new File("ZaWarudo.WAV");
         File gendered = new File("gendered.WAV");
@@ -167,7 +167,7 @@ public class Person{
                     if(dodge() == false){
                         System.out.println(this.getName() + " bashed " + opponent.getName() +
                         " with a " + weapon.get(weaponToUse).getName() +" out of desperation !"+ "\n");
-                        opponent.trueDamage(10);
+                        opponent.trueDamage(5);
                         System.out.println(opponent.getName()+" took (" + opponent.damageCounter + ") damage " + "\n");
                         opponent.resetDamageCounter();
                     }
@@ -184,7 +184,7 @@ public class Person{
                 if(dodge() == false){
                     System.out.println(this.getName() + " bashed " + opponent.getName() +
                     " with a " + weapon.get(weaponToUse).getName() +" out of desperation !"+ "\n");
-                    opponent.trueDamage(10);
+                    opponent.trueDamage(5);
                     System.out.println(opponent.getName()+" took (" + opponent.damageCounter + ") damage " + "\n");
                     opponent.resetDamageCounter();
                 }
