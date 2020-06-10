@@ -9,6 +9,8 @@ public class create{
 
     public static void main(String[] args){
 
+        Thread sound = new SoundBackground();
+
         if(args.length != 2){
             System.out.println("Error: java create (player1) (player2)");
             System.exit(0);
@@ -19,11 +21,14 @@ public class create{
         Person one = new Person(args[0]);
         Person two = new Person(args[1]);
 
+        Person three = new Person(args[0]);
+
         Pistol gun = new Pistol(1);
         Pistol gun2 = new Pistol(2);
         Pistol gun3 = new Pistol(3);
         Starplatinum star = new Starplatinum();
         ZaWarudo za = new ZaWarudo();
+         //WeebKatana katana = new  WeebKatana();
 
         int num_of_rounds = 0;
 
@@ -38,6 +43,7 @@ public class create{
         weaponList.add(gun);
         weaponList2.add(gun2);
         weaponList3.add(gun3);
+        //weaponList2.add(katana);
         }
 
         weaponList3.add(za);
@@ -179,7 +185,7 @@ public class create{
             }
             ///////////////////////////////////////////////////////battle phase////////////////////////////////////////////////////////
             //one.setIsAlive(false);
-
+            sound.start();
             while(one.isAlive() && two.isAlive()){
                 try {
                     Thread.sleep(SECONDS_TO_SLEEP * 1000);
@@ -252,6 +258,20 @@ public class create{
             }
 //System.out.println("loop end")
             }
+
+            // if(one.isAlive() == false){
+            //     System.out.println(one.getName() +" DIED !!!"+ "\n");
+            //     break;
+            // }
+            // if(two.isAlive() == false){
+            //     System.out.println(two.getName() +" DIED !!!"+ "\n");
+            //     break;
+            // }
+            SoundBackground.terminate();
+            //SoundBackground.endSong();
+            //sound.start();
+
+            //song.currentThread().interrupt();
             System.out.println(one.toString() + person_one_backpack.toString()+ "\n"+
             two.toString() + person_two_backpack.toString());
         }
